@@ -31,12 +31,14 @@ http://www-master.ufr-info-p6.jussieu.fr/lmd/
 
 Résultats obtenus à partir des sites des UEs, les informations entre le site dédié
 et la description sur http://www-master.ufr-info-p6.jussieu.fr/lmd/ ne sont pas toujours cohérentes.
-Tableaux à titre indicatif, ne pas leur accorder trop de confiance :
+Tableaux à titre indicatif, ne pas leur accorder trop de confiance.
 
+S1 :  
 ![GitHub Logo](S1/UES1.png)
 1 : obligatoire  
 2 : fortement recommandée  
 3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
+S2 :  
 ![GitHub Logo](S2/UES2.png)
 
 en rouge : les UE obligatoires  
