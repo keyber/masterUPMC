@@ -15,7 +15,13 @@ http://androide.lip6.fr/
 http://dac.lip6.fr/master/  
 http://www-master.ufr-info-p6.jussieu.fr/lmd/
 
+
+###### Je n'ai pas trouvé de source officielle sur internet mais il peut être possible de changer de master après le M1S1 si on a suivi les UE obligatoires du master de destination.
+[diplôme d'excellence](http://www-master.ufr-info-p6.jussieu.fr:8080/espace_etudiant/doc_notes/diplomeexcellence.pdf)
+
+
 # Tableau récapitulatif des choix possibles au S1 et S2
+ 
 
 Résultats obtenus à partir des sites des UEs, les informations entre le site dédié
 et la description sur http://www-master.ufr-info-p6.jussieu.fr/lmd/ ne sont pas toujours cohérentes.
