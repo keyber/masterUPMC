@@ -33,13 +33,13 @@ Résultats obtenus à partir des sites des UEs, les informations entre le site d
 et la description sur http://www-master.ufr-info-p6.jussieu.fr/lmd/ ne sont pas toujours cohérentes.
 Tableaux à titre indicatif, ne pas leur accorder trop de confiance.
 
-S1 :  
+
+en rouge : les UE obligatoires  
+en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
+Semestre 1 :  
 ![GitHub Logo](S1/UES1.png)
 1 : obligatoire  
 2 : fortement recommandée  
 3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
-S2 :  
+Semestre 2 :  
 ![GitHub Logo](S2/UES2.png)
-
-en rouge : les UE obligatoires  
-en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
