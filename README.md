@@ -2,7 +2,8 @@ Fichiers récupérés sur internet dans le but de donner une idée des UE de mas
 
 
 Il y a plein d'UE que je n'ai pas cherché/trouvé.
-Dès que quelques documents étaient trouvés pour une UE, je passais à une autre UE sans chercher d'avantage de documents.
+Dès que quelques documents étaient trouvés pour une UE, je passais à une autre UE sans chercher d'avantage de documents.  
+Il y a de fortes chances que le contenu ait changé.  
 Je ne compte pas continuer à chercher mais toute aide reste bienvenue.
 
 
