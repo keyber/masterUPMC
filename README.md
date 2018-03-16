@@ -1,7 +1,8 @@
-Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC.
+Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC.  
+Recherchez avec github le code d'une UE pour voir si il y a un dossier qui lui correspond.
 
 
-Il y a plein d'UE que je n'ai pas cherché/trouvé.
+Il y a plein d'UE que je n'ai pas cherché/trouvé (je me suis concentré sur les masters ANDROIDE, DAC, SAR, SFPN et STL.
 Dès que quelques documents étaient trouvés pour une UE, je passais à une autre UE sans chercher d'avantage de documents.  
 Il y a de fortes chances que le contenu ait changé.  
 Je ne compte pas continuer à chercher mais toute aide reste bienvenue.
@@ -17,3 +18,12 @@ https://www-master.ufr-info-p6.jussieu.fr:8083/2017/
 http://www-master.ufr-info-p6.jussieu.fr/ue/2014/description.php?code_ue=4I901  
 (en faisant varier la date dans l'URL directement pour accéder aux ressources ds années antérieures)  
 et fait des recherches google.
+
+Site des masters:  
+http://androide.lip6.fr/  
+http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/androide/  
+http://dac.lip6.fr/master/  
+http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/dac/  
+http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/sar/  
+http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/sfpn/  
+http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/stl/  
