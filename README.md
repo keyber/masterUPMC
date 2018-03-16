@@ -21,9 +21,5 @@ et fait des recherches google.
 
 Site des masters:  
 http://androide.lip6.fr/  
-http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/androide/  
 http://dac.lip6.fr/master/  
-http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/dac/  
-http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/sar/  
-http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/sfpn/  
-http://www-master.ufr-info-p6.jussieu.fr/lmd/specialite/stl/  
+http://www-master.ufr-info-p6.jussieu.fr/lmd/
