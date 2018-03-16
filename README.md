@@ -1,8 +1,8 @@
-Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC.  
+Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC (masters ANDROIDE, DAC, SAR, SFPN et STL).  
 Recherchez avec github le code d'une UE pour voir si il y a un dossier qui lui correspond.
 
 
-Il y a plein d'UE que je n'ai pas cherché/trouvé (je me suis concentré sur les masters ANDROIDE, DAC, SAR, SFPN et STL.
+Il y a plein d'UE que je n'ai pas cherché/trouvé .
 Dès que quelques documents étaient trouvés pour une UE, je passais à une autre UE sans chercher d'avantage de documents.  
 Il y a de fortes chances que le contenu ait changé.  
 Je ne compte pas continuer à chercher mais toute aide reste bienvenue.
