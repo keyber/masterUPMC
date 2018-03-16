@@ -39,5 +39,5 @@ Tableaux à titre indicatif, ne pas leur accorder trop de confiance :
 3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
 ![GitHub Logo](S2/UES2.png)
 
-en rouge : les UE obligatoires
+en rouge : les UE obligatoires  
 en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
