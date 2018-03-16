@@ -40,6 +40,8 @@ Tableaux à titre indicatif, ne pas leur accorder trop de confiance.
 Semestre 1 :  
 ![GitHub Logo](S1/UES1.png)
 en rouge : les UE obligatoires  
-en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une  
+en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
+
+
 Semestre 2 :  
 ![GitHub Logo](S2/UES2.png)
