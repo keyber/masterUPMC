@@ -1,4 +1,6 @@
-## Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC (masters ANDROIDE, DAC, SAR, SFPN et STL).  
+# Une idée des UE de master
+
+#### Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC (masters ANDROIDE, DAC, SAR, SFPN et STL).  
 Recherchez avec github le code d'une UE pour voir si il y a un dossier qui lui correspond.
 
 
@@ -29,13 +31,13 @@ http://www-master.ufr-info-p6.jussieu.fr/lmd/
 
 Résultats obtenus à partir des sites des UEs, les informations entre le site dédié
 et la description sur http://www-master.ufr-info-p6.jussieu.fr/lmd/ ne sont pas toujours cohérentes.
+Tableaux à titre indicatif, ne pas leur accorder trop de confiance :
 
-Tableau à titre indicatif, ne pas lui accorder trop de confiance :
-![GitHub Logo](S1/UES1.png)
-![GitHub Logo](S2/UES2.png)
-
+![GitHub Logo](S1/UES1.png =250x250))
 1 : obligatoire  
 2 : fortement recommandée  
 3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
+![GitHub Logo](S2/UES2.png =500x500))
+
 en rouge : les UE obligatoires
 en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
