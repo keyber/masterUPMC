@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" 
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html xml:lang="fr" lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta name='generator' content='SPIP 2.1.30' />
+<meta name='language' content='fr' />
+<meta name='description' content='Master 2017 2018' />
+<!-- alternative std du W3C refuse par l'outil de test d'un certain moteur
+  style type='text/css'>@viewport { width: device-width; zoom: 1;}</style-->
+<meta name='viewport' content="width=device-width, initial-scale=1" />
+<link rel='stylesheet' type='text/css' media='screen' 
+	href='http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=config.css&amp;spec=SAR' />
+<link rel='stylesheet' type='text/css'  media='print'
+	href='extensions/DidacSPIP/squelettes/impression.css' />
+<link rel='stylesheet' type='text/css' 
+	media='handheld, only screen and (max-device-width: 480px)'
+	href='extensions/DidacSPIP/squelettes/handheld.css' />
+
+<style type='text/css'>.annotation{}</style>
+<link rel='shortcut icon' type='image/x-icon' href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/squelettes-dist/spip.ico' /><link rel="alternate"
+	type="application/rss+xml"
+	title="Syndiquer cette rubrique"
+	href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=backend&amp;id_rubrique[]=1&amp;id_rubrique[]=7464"
+/><link rel="search" type="application/opensearchdescription+xml" 
+	href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=opensearch.xml"
+	title="Master 2017 2018" />
+<title>3. Signaux et processus (Master 2017 2018)</title>
+</head>
+<body class="default-parameters">
+<div id="navigation-upmc">
+	<div class="menu-lv1">
+		<a class='menu-logo' href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/ecrire/'
+			title='Espace priv&eacute;'>Espace priv&eacute;</a>
+	</div>
+	<div class="menu-lv1"><a href="http://www.upmc.fr" title="Universit&eacute; Pierre et Marie Curie">UPMC</a></div>
+	<div class='menu-lv1 fs80'><a href="https://www-master.ufr-info-p6.jussieu.fr:8083/2017" title="Accueil du site">Master 2017 2018</a></div>
+	<div class='menu-lv1'>
+      <a href='PR' title="Programmation R&#233;partie">PR</a>
+
+<div><a href='PR#toc'>Index</a></div>
+
+</div>
+
+
+<div class='menu-lv1'>Navigation dans la page</div><ul class='menu-lv1'>
+<li class='menu-lv2'>
+    <a title='Exercice 1' href='#a1'>Chaîne de processus</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 2' href='#a2'>La fonction <tt>sigsuspend</tt></a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 3' href='#a3'>Les Signaux SIGSTOP et SIGCONT</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 4' href='#a4'>Annexes</a></li>
+
+</ul>
+
+
+<div class="menu-lv1"><form id="formulaire_recherche" action="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=recherche" method="get"><div>
+<input name="page" value="recherche" type="hidden" />
+<a href='.'
+	onclick='addSearchProvider("http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=opensearch.xml");return false'
+	title='Utiliser le moteur de recherche OpenSearch'>O</a>
+<label for='recherche' style='display:none'>Rechercher</label>
+<input type="text" name="recherche" id='recherche' value="Rechercher" />
+</div></form>
+</div>	<div class="menu-lv1-last">&nbsp;</div>
+</div>
+
+<div id="content">
+
+<h1>Universit&eacute; Pierre et Marie Curie Master 2017 2018
+
+<br />PR&nbsp;: Travaux Dirig&eacute;s 3. Signaux et processus</h1>
+<p>Cette séance explore les possibilités de communication entre processus avec les fonctions <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=wait&amp;section=2" class='spip_glossaire' title="Voir la description de 'wait' dans la documentation de 'man' section 2">wait</a>, <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=kill&amp;section=2" class='spip_glossaire' title="Voir la description de 'kill' dans la documentation de 'man' section 2">kill</a> et celles autour de <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=sigsuspend&amp;section=2" class='spip_glossaire' title="Voir la description de 'sigsuspend' dans la documentation de 'man' section 2">sigsuspend</a>.</p><br />
+<div id='sequence7464'>
+<br id='e32879' />
+ 
+
+
+<h2 id='a1'>1 Chaîne de processus</h2>
+<p>A l&#8217;aide de la fonction <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=fork&amp;section=2" class='spip_glossaire' title="Voir la description de 'fork' dans la documentation de 'man' section 2">fork</a>, ecrire un programme qui crée une chaîne de processus telle que le processus initial (celui du main) crée un processus qui à son tour en crée un second et ainsi de suite jusqu&#8217;à la création de N processus (en plus du processus initial). Au moment de sa création, le dernier processus de la chaîne affiche le Pid de tous les autres processus y compris celui du processus initial. Chacun des autres processus attend la terminaison de son fils, puis affiche son propre Pid (à l&#8217;aide de <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=getpid&amp;section=2" class='spip_glossaire' title="Voir la description de 'getpid' dans la documentation de 'man' section 2">getpid</a>), celui de son père (à l&#8217;aide de <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=getppid&amp;section=2" class='spip_glossaire' title="Voir la description de 'getppid' dans la documentation de 'man' section 2">getppid</a>) et celui de son fils avant de se terminer.</p>
+
+<p>On souhaite de plus  que le dernier processus créé tire une valeur aléatoire entre  0 et 100, et la transmette à son père comme statut de sortie. Utiliser <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=wait&amp;section=2" class='spip_glossaire' title="Voir la description de 'wait' dans la documentation de 'man' section 2">wait</a> et ses macros pour que le père récupère ce statut, le  processus initial devant l&#8217;afficher avant de se terminer.</p>
+
+<p>Pour produire la valeur aléatoire, utilisez <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=rand&amp;section=3" class='spip_glossaire' title="Voir la description de 'rand' dans la documentation de 'man' section 3">rand</a>&nbsp;ainsi&nbsp;:</p>
+
+<p><code class='spip_code'>(int)(rand () /(((double) RAND_MAX +1) /100))</code></p>
+
+<p>Ecrire le programme  de sorte  que le fiche cette valeur aléatoire</p>
+<div style='margin-top:1em'>Exemple d'appel&nbsp;:
+<div><code> $PWD/bin/chaine_proc 10</code></div></div>
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1012'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>src/chaine_proc.c</tt>
+</div>
+ 
+ 
+<div id='reponses32879'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32879&amp;id_rubrique=7464&amp;id_forum=&amp;retour=Signaux-et-processus#s1012">Obtenir un formulaire de r&eacute;ponse &agrave; la question 1</a>
+</div>
+</div> <br id='e32881' />
+ 
+
+
+<h2 id='a2'>2 La fonction <tt>sigsuspend</tt></h2>
+<p>On reprend l&#8217;exercice précédent, mais on s&#8217;interdit d&#8217;utiliser les fonctions <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=wait&amp;section=3" class='spip_glossaire' title="Voir la description de 'wait' dans la documentation de 'man' section 3">wait</a> et assimilées. A la place on utilisera  les fonctions de la famille <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=sigsuspend&amp;section=2" class='spip_glossaire' title="Voir la description de 'sigsuspend' dans la documentation de 'man' section 2">sigsuspend</a>.  Comment résoudre alors le problème  en s&#8217;assurant qu&#8217;aucun processus ne se termine avant que tous les autres ne soient créées&nbsp;? 
+On s&#8217;assurera qu&#8217;aucun signal n&#8217;est perdu en endormant chaque processus 1 seconde après la création de son fils et avant attente de son signal.</p>
+
+<p>Remarque&nbsp;: on ne demande plus de récupérer la valeur aléatoire ici.</p>
+<div style='margin-top:1em'>Exemple d'appel&nbsp;:
+<div><code> $PWD/bin/suspend 10</code></div></div>
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1032'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>src/suspend.c</tt>
+</div>
+ 
+ 
+<div id='reponses32881'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32881&amp;id_rubrique=7464&amp;id_forum=&amp;retour=Signaux-et-processus#s1032">Obtenir un formulaire de r&eacute;ponse &agrave; la question 2</a>
+</div>
+</div> <br id='e32882' />
+ 
+
+
+<h2 id='a3'>3 Les Signaux SIGSTOP et SIGCONT</h2>
+<p>On reprend encore le même exercice,  mais nous voulons que tous les processus, à l&#8217;exception du processus initial, soient suspendus par un signal <tt>SIGSTOP</tt>. Lorsqu&#8217;ils  le sont tous, le processus initial affiche&nbsp;: <i>Tous les descendants sont suspendus</i>. L’exécution de ces processus doit alors reprendre pour que ceux-ci se terminent. De nouveau, il faut répondre sans utiliser les fonctions de la famille <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=wait&amp;section=2" class='spip_glossaire' title="Voir la description de 'wait' dans la documentation de 'man' section 2">wait</a>.</p>
+
+<p>Remarque&nbsp;: lorsqu&#8217;un processus s’envoie un signal à lui-même, le signal est immédiatement transmis et éventuellement pris en charge,  la reprise de l&#8217;exécution suivant l&#8217;appel à <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=kill&amp;section=2" class='spip_glossaire' title="Voir la description de 'kill' dans la documentation de 'man' section 2">kill</a> n&#8217;a lieu qu&#8217;après. En particulier même si cet appel à <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=kill&amp;section=2" class='spip_glossaire' title="Voir la description de 'kill' dans la documentation de 'man' section 2">kill</a>  était la fin du programme, l&#8217;envoi du signal et sa prise en charge éventuelle auront eu lieu.</p>
+<div style='margin-top:1em'>Exemple d'appel&nbsp;:
+<div><code> $PWD/bin/stop_and_go 10</code></div></div>
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1042'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>src/stop_and_go.c</tt>
+</div>
+ 
+ 
+<div id='reponses32882'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32882&amp;id_rubrique=7464&amp;id_forum=&amp;retour=Signaux-et-processus#s1042">Obtenir un formulaire de r&eacute;ponse &agrave; la question 3</a>
+</div>
+</div> <br id='e33003' />
+
+
+<h2 id='a4' class='documents-joints'>
+<span>4 </span>Annexes
+</h2>
+
+<div class="documents-joints">
+
+<a href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/spip.php?action=acceder_document&amp;arg=22396&amp;cle=a0aa7cfc7e1430194c83f48ad128411291866138&amp;file=txt%2F7464%2Fmakefile.txt' type='text/plain' title='texte - - makefile'><img src='Ajouts/Master_esj2_2017_2018/local/cache-vignettes/L52xH52/txt-56069-372a7.png' width='52' height='52' style='height:52px;width:52px;' alt='' class='spip_logos' /></a><br />makefile
+
+</div>
+
+
+ 
+ 
+
+</div>
+<div id='pied' class='pied_page'><ul>
+<li><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FSignaux-et-processus"
+	rel='noindex nofollow'
+	class='validation-css'
+	title='v&eacute;rifier la validit&eacute; CSS 2.1'>Valid CSS 2.1</a></li>
+<li><a href='http://validator.w3.org/check?uri=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FSignaux-et-processus'
+	class='validation-xml'
+	rel='noindex nofollow'
+	title='v&eacute;rifier la validit&eacute; XHTML Baisc 1.1'>Valid XHTML Basic 1.1</a></li>
+<li><a href='http://www.contentquality.com/?url=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FSignaux-et-processus&amp;rptmode=2'
+	class='validation-wcag'
+	title='v&eacute;rifier la validit&eacute; WCAG 2.0 AAA'>Triple-A conformance Web Content Accessibility Guidelines 2.0</a></li>
+<li><a href='http://www.feedvalidator.org/check.cgi?url=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FSignaux-et-processus'
+	class='validation-rss'
+	rel='noindex nofollow'
+	title="v&eacute;rifier la validit&eacute; RSS">Valid RSS Atom</a></li>
+<li class='date-publi'>
+Calcul&eacute; le 10 octobre 2017 &agrave; 15h06min<br />
+par 
+<a href='http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=auteur&amp;id_auteur=1&amp;sujet=Signaler%20un%20souci%20technique%20avec%20le%20site%20Master%202017%202018' 
+	rel='noindex nofollow'
+	title='Signaler un souci technique avec le site'>DidacSPIP</a><br />
+Universit&eacute; Pierre et Marie Curie
+</li>
+<li><a href='http://validator.w3.org/mobile/check?docAddr=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FSignaux-et-processus'
+	class='mobile-ok'
+	rel='noindex nofollow'
+	title='v&eacute;rifier la validit&eacute; Mobile OK'>Mobile OK</a></li>
+<li><a href='http://www.spip.net'
+	class='reference-spip'
+	title='Visiter SPIP'>SPIP</a></li>
+</ul>
+<script type='text/javascript'
+	src='Ajouts/Master_esj2_2017_2018/local/cache-js/524ff4c67e3c75d9c0b10c6ebebdda42.js'></script>
+</div></div>
+</body>
+</html>

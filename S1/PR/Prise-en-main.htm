@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" 
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html xml:lang="fr" lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta name='generator' content='SPIP 2.1.30' />
+<meta name='language' content='fr' />
+<meta name='description' content='Master 2017 2018' />
+<!-- alternative std du W3C refuse par l'outil de test d'un certain moteur
+  style type='text/css'>@viewport { width: device-width; zoom: 1;}</style-->
+<meta name='viewport' content="width=device-width, initial-scale=1" />
+<link rel='stylesheet' type='text/css' media='screen' 
+	href='http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=config.css&amp;spec=SAR' />
+<link rel='stylesheet' type='text/css'  media='print'
+	href='extensions/DidacSPIP/squelettes/impression.css' />
+<link rel='stylesheet' type='text/css' 
+	media='handheld, only screen and (max-device-width: 480px)'
+	href='extensions/DidacSPIP/squelettes/handheld.css' />
+
+<style type='text/css'>.annotation{}</style>
+<link rel='shortcut icon' type='image/x-icon' href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/squelettes-dist/spip.ico' /><link rel="alternate"
+	type="application/rss+xml"
+	title="Syndiquer cette rubrique"
+	href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=backend&amp;id_rubrique[]=1&amp;id_rubrique[]=7463"
+/><link rel="search" type="application/opensearchdescription+xml" 
+	href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=opensearch.xml"
+	title="Master 2017 2018" />
+<title>1. Prise en main (Master 2017 2018)</title>
+</head>
+<body class="default-parameters">
+<div id="navigation-upmc">
+	<div class="menu-lv1">
+		<a class='menu-logo' href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/ecrire/'
+			title='Espace priv&eacute;'>Espace priv&eacute;</a>
+	</div>
+	<div class="menu-lv1"><a href="http://www.upmc.fr" title="Universit&eacute; Pierre et Marie Curie">UPMC</a></div>
+	<div class='menu-lv1 fs80'><a href="https://www-master.ufr-info-p6.jussieu.fr:8083/2017" title="Accueil du site">Master 2017 2018</a></div>
+	<div class='menu-lv1'>
+      <a href='PR' title="Programmation R&#233;partie">PR</a>
+
+<div><a href='PR#toc'>Index</a></div>
+
+</div>
+
+
+<div class='menu-lv1'>Navigation dans la page</div><ul class='menu-lv1'>
+<li class='menu-lv2'>
+    <a title='Exercice 1' href='#a1'>Lecture d&#8217;un <tt>makefile</tt></a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 2' href='#a2'>Création de processus</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 3' href='#a3'>Description des processus</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 4' href='#a4'>La fonction <tt>exec</tt> et ses variantes</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 5' href='#a5'>Attente de processus</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 6' href='#a6'>Annexes</a></li>
+
+</ul>
+
+
+<div class="menu-lv1"><form id="formulaire_recherche" action="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=recherche" method="get"><div>
+<input name="page" value="recherche" type="hidden" />
+<a href='.'
+	onclick='addSearchProvider("http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=opensearch.xml");return false'
+	title='Utiliser le moteur de recherche OpenSearch'>O</a>
+<label for='recherche' style='display:none'>Rechercher</label>
+<input type="text" name="recherche" id='recherche' value="Rechercher" />
+</div></form>
+</div>	<div class="menu-lv1-last">&nbsp;</div>
+</div>
+
+<div id="content">
+
+<h1>Universit&eacute; Pierre et Marie Curie Master 2017 2018
+
+<br />PR&nbsp;: Travaux Dirig&eacute;s 1. Prise en main</h1>
+<p>Cette première séance consiste en une prise en main de votre environnement de programmation et du site permettant de soumettre son travail. A chaque séance, vous sera fourni en annexe un Makefile, construit sur le même modèle. Vous placerez ce Makefile dans un répertoire dédié à la séance, et vous y créerez un  sous-répertoire <tt>src</tt> où il  s&#8217;attend à trouver vos sources <strong>C</strong>, en plus de celles qui vous seront éventuellement fournies. Vous vous servirez exclusivement de ce Makefile pour compiler vos programmes, qui vous servira également à exécuter les tests qui y sont inclus, déduits de l&#8217;énoncé. En fin de séance la commande <tt>make test</tt> doit pouvoir s&#8217;exécuter entièrement et sans erreurs.</p>
+
+<p>Vous soumettrez vos réponses à l&#8217;aide du lien disponible sous chaque question.</p><br />
+<div id='sequence7463'>
+<br id='e32872' />
+ 
+
+
+<h2 id='a1'>1 Lecture d&#8217;un <tt>makefile</tt></h2>
+<p>On considère le fichier Makefile fourni en annexe. A l&#8217;aide de la documentation Unix de la commande <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=make" class='spip_glossaire' title="Voir la description de 'make' dans la documentation de 'man'">make</a> ainsi que de la documentation plus spécifique de <a href="http://www.gnu.org/software/make/manual/make.html" class='spip_out' rel='external'>Gnu-make</a>, répondez aux questions suivante&nbsp;:</p>
+
+<ol class="spip"><li> à quoi sert la ligne <tt>.SUFFIXES</tt>&nbsp;?</li><li> à quoi sert la ligne <tt>.PHONY</tt>&nbsp;?</li><li> à quoi sert la ligne <tt>$(BIN)%: $(OBJ)%.o $O</tt>&nbsp;?</li><li> à quoi sert la ligne <tt>$(OBJ)%.o: $(SRC)%.c $(HC)</tt>&nbsp;?</li><li> que désignent les variables <tt>$@ $^ $&lt;</tt>&nbsp;?</li><li> à quoi sert le signe "<tt>-</tt>" au début de certaines lignes&nbsp;?</li><li> à quoi sert le doublement du signe "<tt>$</tt>" à certains endroits&nbsp;?</li><li> si l&#8217;on appelle la commande <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=make" class='spip_glossaire' title="Voir la description de 'make' dans la documentation de 'man'">make</a> sans argument, que va-t-il se passer dans le cas de ce fichier Makefile&nbsp;?</li></ol>
+
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1011'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>makefile-desc.txt</tt>
+</div>
+ 
+ 
+<div id='reponses32872'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32872&amp;id_rubrique=7463&amp;id_forum=&amp;retour=Prise-en-main#s1011">Obtenir un formulaire de r&eacute;ponse &agrave; la question 1</a>
+</div>
+</div> <br id='e32876' />
+ 
+
+
+<h2 id='a2'>2 Création de processus</h2>
+<p>A l&#8217;aide de la fonction standard <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=fork" class='spip_glossaire' title="Voir la description de 'fork' dans la documentation de 'man'">fork</a>, définir la fonction</p>
+<div class='spip_code'><code>int nfork (int n)</code></div>
+<p>qui crée <tt>n</tt> processus fils et renvoie&nbsp;:</p>
+
+<ul class="spip"><li> le nombre de processus fils créés, pour le processus père&nbsp;;</li><li> 0  pour les processus fils&nbsp;;</li><li> -1 dans le cas où aucun fils n&#8217;a été créé.</li></ul>
+<p>Si la création d’un processus fils échoue, la fonction n’essaie pas de créer les autres fils. Dans ce cas,  la fonction renvoie le nombre de fils qu’elle a pu créer (ou –1, si aucun fils n&#8217;a été créé). On pourra compléter cette fonction par une fonction <tt>main</tt> l&#8217;appliquant à un entier pas trop grand pour la tester.</p>
+<div style='margin-top:1em'>Exemple d'appel&nbsp;:
+<div><code> $PWD/bin/nfork</code></div></div>
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1051'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>src/nfork.c</tt>
+</div>
+ 
+ 
+<div id='reponses32876'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32876&amp;id_rubrique=7463&amp;id_forum=&amp;retour=Prise-en-main#s1051">Obtenir un formulaire de r&eacute;ponse &agrave; la question 2</a>
+</div>
+</div> <br id='e32877' />
+ 
+
+
+<h2 id='a3'>3 Description des processus</h2>
+<p>On appelle à présent la fonction <tt>nfork</tt> avec la fonction main ci-dessous&nbsp;:</p>
+<pre>#define _XOPEN_SOURCE 700
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int nfork(int nb_fils);
+
+int main (void) {
+  int p;
+  int i=1; int N = 3;
+  do {
+    p = nfork (i) ;
+    if (p != 0 )
+      printf ("%d \n",p); 
+  } while ((p ==0) &amp;&amp; (++i&lt;=N));
+  printf ("FIN\n");
+  return EXIT_SUCCESS;
+}
+</pre>
+<p>On rappelle que l&#8217;instruction <tt>++i&lt;N</tt>  incrémente d&#8217;abord la variable <tt>i</tt> et ne compare qu&#8217;ensuite.</p>
+
+<p>Si on suppose que <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=fork" class='spip_glossaire' title="Voir la description de 'fork' dans la documentation de 'man'">fork</a> n&#8217;échoue jamais, combien des processus sont-ils créés, processus principal inclus&nbsp;?
+Représentez l’arborescence de processus créés, en spécifiant les affichages de chaque processus. On pourra s&#8217;aider de la fonction <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=getpid&amp;section=2" class='spip_glossaire' title="Voir la description de 'getpid' dans la documentation de 'man' section 2">getpid</a>.</p>
+
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1061'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>description.txt</tt>
+</div>
+ 
+ 
+<div id='reponses32877'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32877&amp;id_rubrique=7463&amp;id_forum=&amp;retour=Prise-en-main#s1061">Obtenir un formulaire de r&eacute;ponse &agrave; la question 3</a>
+</div>
+</div> <br id='e32878' />
+ 
+
+
+<h2 id='a4'>4 La fonction <tt>exec</tt> et ses variantes</h2>
+<p>On considère le programme ci-dessous&nbsp;:</p>
+<div class='spip_code'><code> &nbsp;1: int main(int argc, char **argv) {<br />
+ &nbsp;2: &nbsp; &nbsp; pid_t pid;<br />
+ &nbsp;3: &nbsp; &nbsp; &nbsp;int &nbsp;j=0; int i = 0;<br />
+ &nbsp;4: &nbsp; &nbsp; &nbsp;while (i &lt; 2) {<br />
+ &nbsp;5: &nbsp; &nbsp; &nbsp; &nbsp; i ++;<br />
+ &nbsp;6: &nbsp; &nbsp; &nbsp; &nbsp; if ((pid = fork ()) == -1) {<br />
+ &nbsp;7: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;perror (&quot;fork&quot;);<br />
+ &nbsp;8: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return errno;<br />
+ &nbsp;9: &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+ 10: &nbsp; &nbsp; &nbsp; &nbsp; else if (pid == 0) j=i;<br />
+ 11: &nbsp; &nbsp; }<br />
+ 12: &nbsp; &nbsp; if (j == 2) {<br />
+ 13: &nbsp; &nbsp; &nbsp; &nbsp; sleep (2);<br />
+ 14: &nbsp; &nbsp; &nbsp; &nbsp; printf (&quot;sans fils \n&quot;);<br />
+ 15: &nbsp; &nbsp; }<br />
+ 16: &nbsp; &nbsp; else {<br />
+ 17: &nbsp; &nbsp; &nbsp; printf (&quot;%d fils \n », (i-j) );<br />
+ 18: &nbsp; &nbsp; &nbsp; while (j &lt; i) {<br />
+ 19: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;j++;<br />
+ 20: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;wait (NULL);<br />
+ 21: &nbsp; &nbsp; &nbsp; }<br />
+ 22: &nbsp; &nbsp; }<br />
+ 23: &nbsp; &nbsp; return EXIT_SUCCESS;<br />
+ 24: } &nbsp;</code></div>
+<p>Combien de processus sont-ils créés, processus principal inclus&nbsp;?
+Faites l’arborescence des processus en montrant les affichages de chaque processus.</p>
+
+<p>Si, au lieu d’appeler la fonction <strong>C</strong> <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=sleep&amp;section=3" class='spip_glossaire' title="Voir la description de 'sleep' dans la documentation de 'man' section 3">sleep</a> à la ligne 13, 
+on appelle la commande <strong>Unix</strong> <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=sleep&amp;section=1" class='spip_glossaire' title="Voir la description de 'sleep' dans la documentation de 'man' section 1">sleep</a> qui se trouve dans le répertoire <tt>/bin</tt> à l&#8217;aide de la fonction <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=execl&amp;section=3" class='spip_glossaire' title="Voir la description de 'execl' dans la documentation de 'man' section 3">execl</a>, le nombre de processus créés et l’affichage changent-ils&nbsp;?</p>
+
+<p>Même question en utilisant <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=execv&amp;section=3" class='spip_glossaire' title="Voir la description de 'execv' dans la documentation de 'man' section 3">execv</a>.</p>
+
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1071'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>exec.txt</tt>
+</div>
+ 
+ 
+<div id='reponses32878'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32878&amp;id_rubrique=7463&amp;id_forum=&amp;retour=Prise-en-main#s1071">Obtenir un formulaire de r&eacute;ponse &agrave; la question 4</a>
+</div>
+</div> <br id='e33005' />
+ 
+
+
+<h2 id='a5'>5 Attente de processus</h2>
+<p>Ecrire un programme qui crée deux processus fils <i>fils1</i> et <i>fils2</i>. Chaque fils crée un fils, <i> fils1.1</i> et <i>fils2.1</i> respectivement. Ces 4 processus ne font qu’imprimer leur PID et PPID. Dans le cas du processus <i>fils2</i>, il imprime aussi le PID de son frère aîné  <i>fils1</i>. Les processus n&#8217;ayant pas de fils se terminent aussitôt, mais un processus qui a des fils (y compris le processus principal) ne se termine qu’après ceux-ci. On utilisera la fonction <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=wait&amp;section=2" class='spip_glossaire' title="Voir la description de 'wait' dans la documentation de 'man' section 2">wait</a> pour réaliser cette attente, à l&#8217;exclusion de toute autre méthode (fichiers, fonction <tt>sleep</tt> etc).</p>
+<div style='margin-top:1em'>Exemple d'appel&nbsp;:
+<div><code> $PWD/bin/mon_frere</code></div></div>
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1081'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>src/mon_frere.c</tt>
+</div>
+ 
+ 
+<div id='reponses33005'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=33005&amp;id_rubrique=7463&amp;id_forum=&amp;retour=Prise-en-main#s1081">Obtenir un formulaire de r&eacute;ponse &agrave; la question 5</a>
+</div>
+</div> <br id='e33004' />
+
+
+<h2 id='a6' class='documents-joints'>
+<span>6 </span>Annexes
+</h2>
+
+<div class="documents-joints">
+
+<a href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/spip.php?action=acceder_document&amp;arg=22398&amp;cle=bfb388d8c22cef9e6cb3a904a9ac5cc088372506&amp;file=txt%2F7463%2Fmakefile.txt' type='text/plain' title='texte - - makefile'><img src='Ajouts/Master_esj2_2017_2018/local/cache-vignettes/L52xH52/txt-56069-372a7.png' width='52' height='52' style='height:52px;width:52px;' alt='' class='spip_logos' /></a><br />makefile
+<br />
+<a href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/spip.php?action=acceder_document&amp;arg=22400&amp;cle=1c0e87dcc05a97304d965d15a18bc7cca3943acd&amp;file=distant%2FVCS%2F4I400%2FTD%2F1%2Fsrc%2Fexec_sleep.c' type='text/x-csrc' title='C source - - exec_sleep.c'><img src='Ajouts/Master_esj2_2017_2018/local/cache-vignettes/L52xH52/c-34147-01f45.png' width='52' height='52' style='height:52px;width:52px;' alt='' class='spip_logos' /></a><br />exec_sleep.c
+<br />
+<a href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/spip.php?action=acceder_document&amp;arg=22401&amp;cle=a53b84001c3037ff3725d1d9b3d5a1408425db75&amp;file=distant%2FVCS%2F4I400%2FTD%2F1%2Fsrc%2Frepeat_nfork.c' type='text/x-csrc' title='C source - - repeat_nfork.c'><img src='Ajouts/Master_esj2_2017_2018/local/cache-vignettes/L52xH52/c-34147-01f45.png' width='52' height='52' style='height:52px;width:52px;' alt='' class='spip_logos' /></a><br />repeat_nfork.c
+
+</div>
+
+
+ 
+ 
+
+</div>
+<div id='pied' class='pied_page'><ul>
+<li><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FPrise-en-main"
+	rel='noindex nofollow'
+	class='validation-css'
+	title='v&eacute;rifier la validit&eacute; CSS 2.1'>Valid CSS 2.1</a></li>
+<li><a href='http://validator.w3.org/check?uri=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FPrise-en-main'
+	class='validation-xml'
+	rel='noindex nofollow'
+	title='v&eacute;rifier la validit&eacute; XHTML Baisc 1.1'>Valid XHTML Basic 1.1</a></li>
+<li><a href='http://www.contentquality.com/?url=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FPrise-en-main&amp;rptmode=2'
+	class='validation-wcag'
+	title='v&eacute;rifier la validit&eacute; WCAG 2.0 AAA'>Triple-A conformance Web Content Accessibility Guidelines 2.0</a></li>
+<li><a href='http://www.feedvalidator.org/check.cgi?url=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FPrise-en-main'
+	class='validation-rss'
+	rel='noindex nofollow'
+	title="v&eacute;rifier la validit&eacute; RSS">Valid RSS Atom</a></li>
+<li class='date-publi'>
+Calcul&eacute; le 10 octobre 2017 &agrave; 17h07min<br />
+par 
+<a href='http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=auteur&amp;id_auteur=1&amp;sujet=Signaler%20un%20souci%20technique%20avec%20le%20site%20Master%202017%202018' 
+	rel='noindex nofollow'
+	title='Signaler un souci technique avec le site'>DidacSPIP</a><br />
+Universit&eacute; Pierre et Marie Curie
+</li>
+<li><a href='http://validator.w3.org/mobile/check?docAddr=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FPrise-en-main'
+	class='mobile-ok'
+	rel='noindex nofollow'
+	title='v&eacute;rifier la validit&eacute; Mobile OK'>Mobile OK</a></li>
+<li><a href='http://www.spip.net'
+	class='reference-spip'
+	title='Visiter SPIP'>SPIP</a></li>
+</ul>
+<script type='text/javascript'
+	src='Ajouts/Master_esj2_2017_2018/local/cache-js/524ff4c67e3c75d9c0b10c6ebebdda42.js'></script>
+</div></div>
+</body>
+</html>

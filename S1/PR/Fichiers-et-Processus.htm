@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" 
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html xml:lang="fr" lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta name='generator' content='SPIP 2.1.30' />
+<meta name='language' content='fr' />
+<meta name='description' content='Master 2017 2018' />
+<!-- alternative std du W3C refuse par l'outil de test d'un certain moteur
+  style type='text/css'>@viewport { width: device-width; zoom: 1;}</style-->
+<meta name='viewport' content="width=device-width, initial-scale=1" />
+<link rel='stylesheet' type='text/css' media='screen' 
+	href='http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=config.css&amp;spec=SAR' />
+<link rel='stylesheet' type='text/css'  media='print'
+	href='extensions/DidacSPIP/squelettes/impression.css' />
+<link rel='stylesheet' type='text/css' 
+	media='handheld, only screen and (max-device-width: 480px)'
+	href='extensions/DidacSPIP/squelettes/handheld.css' />
+
+<style type='text/css'>.annotation{}</style>
+<link rel='shortcut icon' type='image/x-icon' href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/squelettes-dist/spip.ico' /><link rel="alternate"
+	type="application/rss+xml"
+	title="Syndiquer cette rubrique"
+	href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=backend&amp;id_rubrique[]=1&amp;id_rubrique[]=7471"
+/><link rel="search" type="application/opensearchdescription+xml" 
+	href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=opensearch.xml"
+	title="Master 2017 2018" />
+<title>1. Fichiers et Processus (Master 2017 2018)</title>
+</head>
+<body class="default-parameters">
+<div id="navigation-upmc">
+	<div class="menu-lv1">
+		<a class='menu-logo' href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/ecrire/'
+			title='Espace priv&eacute;'>Espace priv&eacute;</a>
+	</div>
+	<div class="menu-lv1"><a href="http://www.upmc.fr" title="Universit&eacute; Pierre et Marie Curie">UPMC</a></div>
+	<div class='menu-lv1 fs80'><a href="https://www-master.ufr-info-p6.jussieu.fr:8083/2017" title="Accueil du site">Master 2017 2018</a></div>
+	<div class='menu-lv1'>
+      <a href='PR' title="Programmation R&#233;partie">PR</a>
+
+<div><a href='PR#toc'>Index</a></div>
+
+</div>
+
+
+<div class='menu-lv1'>Navigation dans la page</div><ul class='menu-lv1'>
+<li class='menu-lv2'>
+    <a title='Exercice 1' href='#a1'>Recopie de fichier </a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 2' href='#a2'>Remontée de valeurs</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 3' href='#a3'>Processus concurrents sur un fichier</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 4' href='#a4'>Fonctions POSIX vs. fonctions C</a></li>
+<li class='menu-lv2'>
+    <a title='Exercice 5' href='#a5'>Annexes</a></li>
+
+</ul>
+
+
+<div class="menu-lv1"><form id="formulaire_recherche" action="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=recherche" method="get"><div>
+<input name="page" value="recherche" type="hidden" />
+<a href='.'
+	onclick='addSearchProvider("http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=opensearch.xml");return false'
+	title='Utiliser le moteur de recherche OpenSearch'>O</a>
+<label for='recherche' style='display:none'>Rechercher</label>
+<input type="text" name="recherche" id='recherche' value="Rechercher" />
+</div></form>
+</div>	<div class="menu-lv1-last">&nbsp;</div>
+</div>
+
+<div id="content">
+
+<h1>Universit&eacute; Pierre et Marie Curie Master 2017 2018
+
+<br />PR&nbsp;: Travaux sur Machine 1. Fichiers et Processus</h1>
+<p>Cette séance est consacrée aux méta-données associées aux fichiers, notamment lorsqu&#8217;elles sont utilisées par des processus concurrents.
+Par rapport à la séance précédente, on sera plus soigneux quant au traitement d&#8217;erreur. On pourra s&#8217;inspirer du fichier <strong>C</strong>&nbsp;fourni en annexe pour cela.</p><br />
+<div id='sequence7471'>
+<br id='e32892' />
+ 
+
+
+<h2 id='a1'>1 Recopie de fichier </h2>
+<p>Ecrire en <strong>C</strong> un programme qui prend en argument deux noms de fichier 
+et recopie intégralement le contenu du premier dans le second,
+en utilisant les fonctions POSIX <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=open&amp;section=2" class='spip_glossaire' title="Voir la description de 'open' dans la documentation de 'man' section 2">open</a>, <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=read&amp;section=2" class='spip_glossaire' title="Voir la description de 'read' dans la documentation de 'man' section 2">read</a> et <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=write&amp;section=2" class='spip_glossaire' title="Voir la description de 'write' dans la documentation de 'man' section 2">write</a>. On donnera au deuxième fichier les droits en lecture et écriture pour soi (à l&#8217;aide du 3e argument de <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=open&amp;section=2" class='spip_glossaire' title="Voir la description de 'open' dans la documentation de 'man' section 2">open</a> ou en appelant la fonction <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=chmod&amp;section=2" class='spip_glossaire' title="Voir la description de 'chmod' dans la documentation de 'man' section 2">chmod</a>). On veillera à dénoncer (avec la fonction <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=perror&amp;section=3" class='spip_glossaire' title="Voir la description de 'perror' dans la documentation de 'man' section 3">perror</a>)
+les cas d&#8217;erreur suivants&nbsp;:</p>
+
+<ul class="spip"><li> la ligne de commande ne contient pas exactement 2 noms&nbsp;;</li><li> le premier nom ne désigne pas un fichier régulier et accessible en lecture&nbsp;;</li><li> le second ne peut être créé (répertoire inaccessible en écriture, ou  entrée déjà existante dedans).</li></ul>
+<p>En cas de réussiste, le programme retourne 0 sinon il retourne la valeur de <tt>errno</tt>.</p>
+<div style='margin-top:1em'>Exemple d'appel&nbsp;:
+<div><code> $PWD/bin/mycp src/mycp.c cp.c</code></div></div>
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1012'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>mycp.c</tt>
+</div>
+ 
+ 
+<div id='reponses32892'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32892&amp;id_rubrique=7471&amp;id_forum=&amp;retour=Fichiers-et-Processus#s1012">Obtenir un formulaire de r&eacute;ponse &agrave; la question 1</a>
+</div>
+</div> <br id='e32893' />
+ 
+
+
+<h2 id='a2'>2 Remontée de valeurs</h2>
+<p>Ecrire en <strong>C</strong> un programme&nbsp;prenant en argument un nombre <i>n</i> et un nom de fichier.  Le processus principal  doit créer <i>n</i> processus fils, à l&#8217;aide de <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=fork" class='spip_glossaire' title="Voir la description de 'fork' dans la documentation de 'man'">fork</a>. Chaque processus fils produit une valeur aléatoire  qu&#8217;il insère dans le  fichier donné en 2e argument,  à destination du processus principal. La valeur aléatoire est calculée par la fonction <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=rand&amp;section=3" class='spip_glossaire' title="Voir la description de 'rand' dans la documentation de 'man' section 3">rand</a> ainsi&nbsp;:</p>
+
+<p><tt>(int) (10*(float)rand()/ RAND_MAX)</tt></p>
+
+<p>De son côté, le processus principal doit attendre la terminaison de tous ses fils, puis extraire toutes les valeurs du fichier pour ensuite les additionner et enfin afficher la somme résultante. On pourra utiliser <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=wait&amp;section=2" class='spip_glossaire' title="Voir la description de 'wait' dans la documentation de 'man' section 2">wait</a> ou <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=waitpid&amp;section=2" class='spip_glossaire' title="Voir la description de 'waitpid' dans la documentation de 'man' section 2">waitpid</a> appliquée aux résultats de <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=fork&amp;section=2" class='spip_glossaire' title="Voir la description de 'fork' dans la documentation de 'man' section 2">fork</a> pour attendre les terminaisons,
+puis utiliser <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=lseek&amp;section=2" class='spip_glossaire' title="Voir la description de 'lseek' dans la documentation de 'man' section 2">lseek</a>. On contrôlera les cas d&#8217;erreurs comme à l&#8217;exercice précédent.</p>
+<div style='margin-top:1em'>Exemple d'appel&nbsp;:
+<div><code> $PWD/bin/remonte 8 aleas</code></div></div>
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1022'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>remonte.c</tt>
+</div>
+ 
+ 
+<div id='reponses32893'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32893&amp;id_rubrique=7471&amp;id_forum=&amp;retour=Fichiers-et-Processus#s1022">Obtenir un formulaire de r&eacute;ponse &agrave; la question 2</a>
+</div>
+</div> <br id='e32890' />
+ 
+
+
+<h2 id='a3'>3 Processus concurrents sur un fichier</h2>
+<p>On considère le programme <tt>forkfile.c</tt> fourni en annexe&nbsp;:</p>
+<pre>#define _XOPEN_SOURCE 700
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/wait.h&gt;
+#include &lt;errno.h&gt;
+
+int main (void) {
+    int fd1, fd2, fd3;
+    if ((fd1 = open ("./fich1", O_RDWR| O_CREAT | O_TRUNC, 0600)) == -1) {
+      perror("./fich1");
+      return errno;
+    }
+    if (write (fd1,"abcde", strlen ("abcde")) == -1) {
+      perror("./fich1");
+      return errno;
+    }
+    if (fork () == 0) {
+        if ((fd2 = open ("./fich1", O_RDWR)) == -1) {
+	  perror("./fich1");
+	  return errno;
+	}
+        if (write (fd1,"123", strlen ("123")) == -1) {
+	  perror("./fich1");
+	  return errno;
+	}
+        if (write (fd2,"45", strlen ("45")) == -1) {
+	  perror("./fich1");
+	  return errno;
+	}
+        close(fd2); 
+    } else {
+        fd3 = dup(fd1);
+        if (lseek (fd3,0,SEEK_SET) == -1) {
+	  perror("./fich1");
+	  return errno;
+	}
+        if (write (fd3,"fg", strlen ("fg")) == -1) {
+	  perror("./fich1");
+	  return errno;
+	}
+	if (write (fd1,"hi", strlen ("hi")) == -1)  {
+	  perror("./fich1");
+	  return errno;
+	}
+        wait (NULL);
+        close (fd1);
+        close(fd3);
+        return EXIT_SUCCESS;
+    }
+}
+</pre>
+<p>Quels sont les contenus possibles du fichier <tt>fich1</tt>&nbsp;?</p>
+
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1032'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>forkwrite.txt</tt>
+</div>
+ 
+ 
+<div id='reponses32890'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32890&amp;id_rubrique=7471&amp;id_forum=&amp;retour=Fichiers-et-Processus#s1032">Obtenir un formulaire de r&eacute;ponse &agrave; la question 3</a>
+</div>
+</div> <br id='e32895' />
+ 
+
+
+<h2 id='a4'>4 Fonctions POSIX vs. fonctions C</h2>
+<p>Écrire en <strong>C</strong> deux fonctions qui lisent caractère par caractère un fichier passé en argument, et qui affichent chaque caractère dès qu&#8217;il est lu. Ces fonctions utiliseront 3 processus  partageant le même descripteur et agissant à l&#8217;identique (l&#8217;identité de chaque processus est affichée avec le caractère lu).
+La première utilisera les  standard POSIX <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=open&amp;section=2" class='spip_glossaire' title="Voir la description de 'open' dans la documentation de 'man' section 2">open</a> et <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=read&amp;section=2" class='spip_glossaire' title="Voir la description de 'read' dans la documentation de 'man' section 2">read</a>,
+la seconde  <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=fopen&amp;section=3" class='spip_glossaire' title="Voir la description de 'fopen' dans la documentation de 'man' section 3">fopen</a> et  <a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=zman&amp;nom=fgetc&amp;section=3" class='spip_glossaire' title="Voir la description de 'fgetc' dans la documentation de 'man' section 3">fgetc</a>. Vous écrirez un unique programme qui, selon que son premier argument est <tt>-p</tt> ou <tt>-C</tt> appliquera l&#8217;une ou l&#8217;autre de ces fonctions sur le fichier donné en 2e argument. Vous contrôlerez les cas d&#8217;erreur comme précédemment. Quelle différence observez-vous entre les deux modes d&#8217;appels&nbsp;?</p>
+<div style='margin-top:1em'>Exemple d'appel&nbsp;:
+<div><code> $PWD/bin/lectures -p src/lectures.c; $PWD/bin/lectures -C src/lectures.c</code></div></div>
+
+
+
+<div style='margin-bottom:1em;text-align:right' id='s1042'>
+Fichier &agrave; cr&eacute;er&nbsp;: <tt>lectures.c</tt>
+</div>
+ 
+ 
+<div id='reponses32895'>
+ 
+
+<div class="forum-repondre" style="font-weight:bold">
+<a href="http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=ramassage&amp;id_article=32895&amp;id_rubrique=7471&amp;id_forum=&amp;retour=Fichiers-et-Processus#s1042">Obtenir un formulaire de r&eacute;ponse &agrave; la question 4</a>
+</div>
+</div> <br id='e32894' />
+
+
+<h2 id='a5' class='documents-joints'>
+<span>5 </span>Annexes
+</h2>
+
+<div class="documents-joints">
+
+<a href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/spip.php?action=acceder_document&amp;arg=22399&amp;cle=0dde54f0f9c7fd5172af5b2628d465450babc160&amp;file=distant%2FVCS%2F4I400%2FTM%2F1%2Fsrc%2Fforkfile.c' type='text/x-csrc' title='C source - - forkfile.c'><img src='Ajouts/Master_esj2_2017_2018/local/cache-vignettes/L52xH52/c-34147-01f45.png' width='52' height='52' style='height:52px;width:52px;' alt='' class='spip_logos' /></a><br />forkfile.c
+<br />
+<a href='https://www-master.ufr-info-p6.jussieu.fr:8083/2017/spip.php?action=acceder_document&amp;arg=22533&amp;cle=30fc7314f6eddb76b76c11560c6fe9377316c172&amp;file=txt%2F7471%2Fmakefile.txt' type='text/plain' title='texte - - makefile'><img src='Ajouts/Master_esj2_2017_2018/local/cache-vignettes/L52xH52/txt-56069-372a7.png' width='52' height='52' style='height:52px;width:52px;' alt='' class='spip_logos' /></a><br />makefile
+
+</div>
+
+
+ 
+ 
+
+</div>
+<div id='pied' class='pied_page'><ul>
+<li><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FFichiers-et-Processus"
+	rel='noindex nofollow'
+	class='validation-css'
+	title='v&eacute;rifier la validit&eacute; CSS 2.1'>Valid CSS 2.1</a></li>
+<li><a href='http://validator.w3.org/check?uri=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FFichiers-et-Processus'
+	class='validation-xml'
+	rel='noindex nofollow'
+	title='v&eacute;rifier la validit&eacute; XHTML Baisc 1.1'>Valid XHTML Basic 1.1</a></li>
+<li><a href='http://www.contentquality.com/?url=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FFichiers-et-Processus&amp;rptmode=2'
+	class='validation-wcag'
+	title='v&eacute;rifier la validit&eacute; WCAG 2.0 AAA'>Triple-A conformance Web Content Accessibility Guidelines 2.0</a></li>
+<li><a href='http://www.feedvalidator.org/check.cgi?url=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FFichiers-et-Processus'
+	class='validation-rss'
+	rel='noindex nofollow'
+	title="v&eacute;rifier la validit&eacute; RSS">Valid RSS Atom</a></li>
+<li class='date-publi'>
+Calcul&eacute; le 10 octobre 2017 &agrave; 17h07min<br />
+par 
+<a href='http://www-master.ufr-info-p6.jussieu.fr:8080/site-annuel-courant/spip.php?page=auteur&amp;id_auteur=1&amp;sujet=Signaler%20un%20souci%20technique%20avec%20le%20site%20Master%202017%202018' 
+	rel='noindex nofollow'
+	title='Signaler un souci technique avec le site'>DidacSPIP</a><br />
+Universit&eacute; Pierre et Marie Curie
+</li>
+<li><a href='http://validator.w3.org/mobile/check?docAddr=http%3A%2F%2Fwww-master.ufr-info-p6.jussieu.fr%3A8080%2Fsite-annuel-courant%2FFichiers-et-Processus'
+	class='mobile-ok'
+	rel='noindex nofollow'
+	title='v&eacute;rifier la validit&eacute; Mobile OK'>Mobile OK</a></li>
+<li><a href='http://www.spip.net'
+	class='reference-spip'
+	title='Visiter SPIP'>SPIP</a></li>
+</ul>
+<script type='text/javascript'
+	src='Ajouts/Master_esj2_2017_2018/local/cache-js/524ff4c67e3c75d9c0b10c6ebebdda42.js'></script>
+</div></div>
+</body>
+</html>

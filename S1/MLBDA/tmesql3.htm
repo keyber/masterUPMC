@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>TME SQL3 [Bases de Données - Databases]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="site,enseignement,master,mlbda,tmesql3"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/lib/exe/opensearch.php" title="Bases de Données - Databases"/>
+<link rel="start" href="/wiki/"/>
+<link rel="alternate" type="application/rss+xml" title="Derniers changements" href="/wiki/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Catégorie courante" href="/wiki/feed.php?mode=list&amp;ns=site:enseignement:master:mlbda"/>
+<link rel="alternate" type="text/html" title="HTML brut" href="/wiki/_export/xhtml/site/enseignement/master/mlbda/tmesql3"/>
+<link rel="canonical" href="http://www-bd.lip6.fr/wiki/site/enseignement/master/mlbda/tmesql3"/>
+<link rel="stylesheet" type="text/css" href="/wiki/lib/exe/css.php?t=dokuwiki&amp;tseed=e073184c87c6e1932648d209ba0fec09"/>
+<!--[if gte IE 9]><!-->
+<script type="text/javascript">/*<![CDATA[*/var NS='site:enseignement:master:mlbda';var JSINFO = {"id":"site:enseignement:master:mlbda:tmesql3","namespace":"site:enseignement:master:mlbda","move_renameokay":false,"se_act":"show","se_template":"dokuwiki","se_platform":"a","se_headers":"3","se_xcl_headers":"1,2","se_type":"class","se_device":"","se_suspend":0,"se_name":"_empty_","plugin_folded":{"hide":"masquer","reveal":"r\u00e9v\u00e9ler"},"isadmin":0,"isauth":0};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="/wiki/lib/exe/jquery.php?tseed=23f888679b4f1dc26eef34902aca964f"></script>
+<script type="text/javascript" charset="utf-8" src="/wiki/lib/exe/js.php?t=dokuwiki&amp;tseed=e073184c87c6e1932648d209ba0fec09"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="/wiki/lib/tpl/dokuwiki/images/favicon.ico" />
+<link rel="apple-touch-icon" href="/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+    </head>
+
+<body>
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    <div class="plugin_translation"><ul><li><div class='li cur'><a href="/wiki/site/enseignement/master/mlbda/tmesql3" class="wikilink1 cur flag" title="Français"><img src="/wiki/lib/plugins/translation/flags/fr.gif" alt="fr" height="11" />fr</a></div></li><li><div class='li'><a href="/wiki/en/site/enseignement/master/mlbda/tmesql3" class="wikilink2 flag" title="English"><img src="/wiki/lib/plugins/translation/flags/en.gif" alt="en" height="11" />en</a></div></li></ul></div>
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="#dokuwiki__content">Aller au contenu</a></li>
+        </ul>
+
+        <h1><a href="/wiki/start"  accesskey="h" title="[H]"><img src="/wiki/_media/wiki/logo.png" width="80" height="80" alt="" /> <span>Bases de Données - Databases</span></a></h1>
+                    <p class="claim">Site Web de l'équipe BD du LIP6</p>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">Outils pour utilisateurs</h3>
+                <ul>
+                    <li><a href="/wiki/site/enseignement/master/mlbda/tmesql3?do=login&amp;sectok="  class="action login" rel="nofollow" title="S&#039;identifier">S'identifier</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Outils du site</h3>
+            <form action="/wiki/start" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" placeholder="Rechercher" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><button type="submit" title="Rechercher">Rechercher</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="site:enseignement:master:mlbda:tmesql3" /><select name="do" class="edit quickselect" title="Outils"><option value="">Outils</option><optgroup label="Outils de la page"></optgroup><optgroup label="Outils du site"></optgroup><optgroup label="Outils pour utilisateurs"><option value="login">S'identifier</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+            <ul>
+                            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                                        <div class="trace"><span class="bchead">Piste:</span> <span class="bcsep">•</span> <bdi><a href="/wiki/site/enseignement/master/mlbda/start"  class="breadcrumbs" title="site:enseignement:master:mlbda:start">4I801 MLBDA : Modèles et Langages pour les Bases de Données Avancés</a></bdi> <span class="bcsep">•</span> <bdi><a href="/wiki/site/enseignement/master/mlbda/priseenmain"  class="breadcrumbs" title="site:enseignement:master:mlbda:priseenmain">TME Requêtes SQL</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="/wiki/site/enseignement/master/mlbda/tmesql3"  class="breadcrumbs" title="site:enseignement:master:mlbda:tmesql3">TME SQL3</a></bdi></span></div>
+                    </div>
+    
+
+
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <div id="dokuwiki__aside"><div class="pad aside include group">
+                    <h3 class="toggle">Panneau latéral</h3>
+                    <div class="content"><div class="group">
+                                                                        
+<div><div id="nojs_indexmenu_183315892659dccd4770848" data-jsajax="%26msort%3Dindexmenu_n%26nsort%3D1" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="closed"><div class="li"><a href="/wiki/site/membres/start" class="indexmenu_idx_head">Membres</a></div></li>
+<li class="open"><div class="li"><a href="/wiki/site/enseignement/start" class="indexmenu_idx_head">Enseignement</a></div>
+<ul class="idx">
+<li class="closed"><div class="li"><a href="/wiki/site/enseignement/stages/start" class="indexmenu_idx_head">Stages</a></div></li>
+<li class="closed"><div class="li"><a href="/wiki/site/enseignement/licence/start" class="indexmenu_idx_head">Licence</a></div></li>
+<li class="open"><div class="li"><a href="/wiki/site/enseignement/master/start" class="indexmenu_idx_head">Master</a></div>
+<ul class="idx">
+<li class="closed"><div class="li"><a href="/wiki/site/enseignement/master/bdr/start" class="indexmenu_idx_head">4I803 BDR : Bases de Données Réparties</a></div></li>
+<li class="open"><div class="li"><a href="/wiki/site/enseignement/master/mlbda/start" class="indexmenu_idx_head">4I801 MLBDA : Modèles et Langages pour les Bases de Données Avancés</a></div>
+<ul class="idx">
+<li class="closed"><div class="li"><a href="/wiki/site/enseignement/master/mlbda/tme_xquery1" class="indexmenu_idx_head">TME XQuery (séance 1)</a></div></li>
+<li class="level4" ><div class="li"><a href="/wiki/site/enseignement/master/mlbda/tme_xquery2" class="wikilink1" title="site:enseignement:master:mlbda:tme_xquery2">TME XQuery (Séance 2)</a></div></li>
+<li class="level4" ><div class="li"><a href="/wiki/site/enseignement/master/mlbda/xqueryfaq" class="wikilink1" title="site:enseignement:master:mlbda:xqueryfaq">XQuery: Foire aux Questions</a></div></li>
+<li class="level4" ><div class="li"><a href="/wiki/site/enseignement/master/mlbda/priseenmain" class="wikilink1" title="site:enseignement:master:mlbda:priseenmain">TME Requêtes SQL</a></div></li>
+<li class="level4" ><div class="li"><span class="curid"><a href="/wiki/site/enseignement/master/mlbda/tmesql3" class="wikilink1" title="site:enseignement:master:mlbda:tmesql3">TME SQL3</a></span></div></li>
+<li class="level4" ><div class="li"><a href="/wiki/site/enseignement/master/mlbda/tme_xpath" class="wikilink1" title="site:enseignement:master:mlbda:tme_xpath">TME XPATH</a></div></li>
+<li class="level4" ><div class="li"><a href="/wiki/site/enseignement/master/mlbda/tme_rdf_et_sparql" class="wikilink1" title="site:enseignement:master:mlbda:tme_rdf_et_sparql">TME RDF et SPARQL</a></div></li>
+</ul>
+</li>
+<li class="closed"><div class="li"><a href="/wiki/site/enseignement/master/asws/start" class="indexmenu_idx_head">5I851 ASWS : Apprentissage Symbolique et Web Sémantique</a></div></li>
+<li class="closed"><div class="li"><a href="/wiki/site/enseignement/master/bdle/start" class="indexmenu_idx_head">5I852 BDLE : Bases de Données Large Echelle</a></div></li>
+</ul>
+</li>
+<li class="closed"><div class="li"><a href="/wiki/site/enseignement/documentation/start" class="indexmenu_idx_head">Documentation</a></div></li>
+</ul>
+</li>
+<li class="closed"><div class="li"><a href="/wiki/site/recherche/start" class="indexmenu_idx_head">Recherche</a></div></li>
+<li class="closed"><div class="li"><a href="/wiki/site/offres/start" class="indexmenu_idx_head">Stages, thèses, CDD</a></div></li>
+<li class="level1" ><div class="li"><a href="/wiki/site/seminaires" class="wikilink1" title="site:seminaires">Séminaires</a></div></li>
+<li class="level1" ><div class="li"><a href="/wiki/site/comment_venir_chez_nous" class="wikilink1" title="site:comment_venir_chez_nous">Comment venir chez nous</a></div></li>
+</ul>
+</div></div>
+<hr />
+                                            </div></div>
+                </div></div><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                
+                <div class="pageId"><span>site:enseignement:master:mlbda:tmesql3</span></div>
+
+                <div class="page group">
+                                        
+                    <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table des matières</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#tme_sql3">TME SQL3</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#sujet">Sujet</a></div></li>
+<li class="level2"><div class="li"><a href="#documentation">Documentation</a></div></li>
+<li class="level2"><div class="li"><a href="#questions_frequentes_sur_sql3">Questions fréquentes sur SQL3</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1 class="sectionedit1" id="tme_sql3">TME SQL3</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="sujet">Sujet</h2>
+<div class="level2">
+
+<p>
+Voir <a href="/wiki/lib/exe/fetch.php?tok=e0cf25&amp;media=http%3A%2F%2Fwww-bd.lip6.fr%2Fwiki%2F_media%2Fsite%2Fenseignement%2Fmaster%2Fmlbda%2Ftd2016_4i801_sujets.pdf" class="media mediafile mf_pdf" title="http://www-bd.lip6.fr/wiki/_media/site/enseignement/master/mlbda/td2016_4i801_sujets.pdf">l&#039;énoncé</a> : page 6, TD3 Exercice 1: Application CAO. Voir la <strong>syntaxe</strong> page 10
+</p>
+
+<p>
+Prérequis : votre environnement doit déjà être configuré : voir <a href="/wiki/site/enseignement/documentation/oracle/connexionoracle" class="wikilink1" title="site:enseignement:documentation:oracle:connexionoracle">Connexion Oracle 11</a>
+</p>
+
+<p>
+Ouvrir une fenêtre de terminal (xterm), pour exécuter les commandes suivantes :
+</p>
+<div class="table sectionedit3"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"><em class="u">commande</em>  </th><th class="col1"> <em class="u">description</em> </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> cd </td><td class="col1"> aller dans votre répertoire $HOME </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> tar zxvf $BD_TOOL/sql3.tgz </td><td class="col1"> installer l&#039;archive sql3.tgz dans votre répertoire principal </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> cd sql3 </td><td class="col1"> aller dans votre répertoire de travail </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> emacs schema.sql &amp; </td><td class="col1"> éditer le fichier schema.sql </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> se connecter à  Oracle </td><td class="col1"> </td>
+	</tr>
+</table></div>
+
+<p>
+L&#039;archive sql3.tgz contient des scripts SQL*Plus utiles pour le TME :
+</p>
+<div class="table sectionedit4"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"><strong>commande</strong> </th><th class="col1"> <strong>description</strong> </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> @compile </td><td class="col1"> compile le type ou  la méthode et affiche les erreurs </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> @liste </td><td class="col1"> affiche les noms des types et méthodes de utilisateur </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> @source nom </td><td class="col1"> affiche le code source d&#039;un type ou d&#039;une méthode avec les numéros de ligne. Utile pour localiser une erreur. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> @vider </td><td class="col1"> supprime tout ce que vous avez créé. Cela réinitialise votre compte oracle </td>
+	</tr>
+</table></div>
+
+</div>
+
+<h2 class="sectionedit5" id="documentation">Documentation</h2>
+<div class="level2">
+
+<p>
+Lire attentivement la syntaxe SQL3 (voir poly ) et les réponses aux questions fréquentes ci-dessous.
+</p>
+
+<p>
+La <a href="/wiki/site/enseignement/documentation/oracle/oracle10/documentationoracle" class="wikilink1" title="site:enseignement:documentation:oracle:oracle10:documentationoracle">Documentation sur Oracle 10G</a> et les <a href="/wiki/site/enseignement/documentation/oracle/oracle10/questionsursql" class="wikilink1" title="site:enseignement:documentation:oracle:oracle10:questionsursql">FAQ pour les TME SQL et PL/SQL</a>
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="questions_frequentes_sur_sql3">Questions fréquentes sur SQL3</h2>
+<div class="level2">
+
+</div>
+
+<h4 id="mots_reserves">Mots réservés</h4>
+<div class="level4">
+
+<p>
+Les mots suivants sont des mots-clé du langage: <code>table</code>, <code>type</code>, <code>or</code>, <code>cube</code>, …
+</p>
+
+</div>
+
+<h4 id="commentaire">Commentaire</h4>
+<div class="level4">
+
+<p>
+Les deux tirets <code>- -</code> qui indiquent une ligne de commentaire doivent être positionnés en ==début== de ligne.
+</p>
+
+</div>
+
+<h4 id="erreur_de_casse">Erreur de casse</h4>
+<div class="level4">
+
+<p>
+Le compilateur SQL3 n&#039;est pas sensible à la casse. Un attribut et son type ne peuvent pas être le même mot. Exemple d&#039;erreur de casse :
+ <code>create type X as object (adresse Adresse );</code> est faux car “adresse” (en minuscule) et “Adresse” (avec A majuscule) sont considérés comme le meme mot.
+</p>
+
+</div>
+
+<h4 id="nom_d_attribut_trop_long">Nom d&#039;attribut trop long</h4>
+<div class="level4">
+
+<p>
+Choisir un nom d&#039;attribut plus court (longueur maxi: …)
+</p>
+
+</div>
+
+<h4 id="creation_d_une_table">Creation d&#039;une table</h4>
+<div class="level4">
+
+<p>
+Sert pour stocker les objets. Ne pas compiler l&#039;ordre de création de table.
+</p>
+
+</div>
+
+<h4 id="table_imbriquee">Table imbriquée</h4>
+<div class="level4">
+
+<p>
+Les tables imbriquées sont déclarées dans l&#039;ordre de création de la table principale. Exemple, la table T contient les objets X dont les attributs x1 et x2 sont ensemblistes.
+</p>
+<pre class="code oracle11"> <span class="kw1">CREATE</span> <span class="kw1">TYPE</span> Y <span class="kw1">AS</span> <span class="kw1">TABLE</span> <span class="kw1">OF</span> <span class="kw1">NUMBER</span><span class="br0">&#40;</span><span class="nu0">3</span><span class="br0">&#41;</span>;
+ <span class="sy0">/</span>
+ <span class="kw1">CREATE</span> <span class="kw1">TYPE</span> X <span class="kw1">AS</span> object <span class="br0">&#40;</span> x1 Y<span class="sy0">,</span> x2 Y<span class="br0">&#41;</span>;
+ <span class="sy0">/</span>
+ <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> T <span class="kw1">OF</span> X nested <span class="kw1">TABLE</span> x1 store <span class="kw1">AS</span> T1<span class="sy0">,</span> nested <span class="kw1">TABLE</span> x2 store <span class="kw1">AS</span> T2; </pre>
+
+</div>
+
+<h4 id="suppression_d_un_type">Suppression d&#039;un type</h4>
+<div class="level4">
+
+<p>
+Forcer la suppression d&#039;un type utlisé dans la définition d&#039;autre types
+</p>
+<ul>
+<li class="level1"><div class="li"> drop type Personne <code>force</code>;</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="signature_d_une_methode">Signature d&#039;une méthode</h4>
+<div class="level4">
+
+<p>
+Type des paramètres. Ne pas indiquer la taille des types. Exple :
+</p>
+<ul>
+<li class="level1"><div class="li"> signature fausse: <code>f(a in number(5), b in varchar2(30))</code></div>
+</li>
+<li class="level1"><div class="li"> signature correcte: <code>f(a in number, b in varchar2)</code></div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="insertion">Insertion</h4>
+<div class="level4">
+
+<p>
+La commande <code>insert</code> insère un seul tuple (ou un seul objet). 
+Ne pas oublier les parenthèses après le mot clé <code>values( … )</code>: Ne pas oublier le constructeur (égal au nom du type) pour insérer un objet.
+</p>
+
+</div>
+
+<h4 id="dereferencement">Déréférencement</h4>
+<div class="level4">
+
+<p>
+Contrairement à SQL, PL/SQL ne supporte pas les expressions de chemins avec traversée de références. Pour contourner ce manque, écrire une requête pour déréférencer explicitement chaque référence. Exemple pour obtenir le nom de la matière d&#039;une pièce de base.
+Expression incorrecte:
+</p>
+<pre class="code plsql">  n <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=VARCHAR"><span class="kw1">VARCHAR</span></a><span class="br0">&#40;</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=BEGIN"><span class="kw1">BEGIN</span></a>
+  incorrect<span class="sy0">:</span> n <span class="sy0">:=</span> self<span class="sy0">.</span>est_en<span class="sy0">.</span>nom<span class="sy0">;</span></pre>
+
+<p>
+Solution correcte
+</p>
+<pre class="code plsql">  n <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=VARCHAR"><span class="kw1">VARCHAR</span></a><span class="br0">&#40;</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=BEGIN"><span class="kw1">BEGIN</span></a>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=SELECT"><span class="kw1">SELECT</span></a> <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=DEREF"><span class="kw2">DEREF</span></a><span class="br0">&#40;</span>self<span class="sy0">.</span>est_en<span class="br0">&#41;</span><span class="sy0">.</span>nom <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=INTO"><span class="kw1">INTO</span></a> n <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=FROM"><span class="kw1">FROM</span></a> dual<span class="sy0">;</span>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=RETURN"><span class="kw1">RETURN</span></a> n<span class="sy0">;</span>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=END"><span class="kw1">END</span></a><span class="sy0">;</span></pre>
+
+<p>
+Autre solution correcte 
+</p>
+<pre class="code plsql">  n <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=VARCHAR"><span class="kw1">VARCHAR</span></a><span class="br0">&#40;</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=BEGIN"><span class="kw1">BEGIN</span></a>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=SELECT"><span class="kw1">SELECT</span></a> est_en<span class="sy0">.</span>nom <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=INTO"><span class="kw1">INTO</span></a> n <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=FROM"><span class="kw1">FROM</span></a> dual<span class="sy0">;</span>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=RETURN"><span class="kw1">RETURN</span></a> n<span class="sy0">;</span>
+  <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=END"><span class="kw1">END</span></a><span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="heritage">Héritage</h4>
+<div class="level4">
+
+<p>
+Lors de la définition d&#039;un type, mentionner <code>not final</code> lors de la création du type, ou <code>not final cascade</code> si on modifie un type existant qui est lui même un sous-type. Exemple :
+</p>
+<pre class="code oracle11"><span class="kw1">CREATE</span> <span class="kw1">TYPE</span> Personne <span class="br0">&#40;</span>....<span class="br0">&#41;</span><span class="kw1">NOT</span> final;
+<span class="kw1">CREATE</span> <span class="kw1">TYPE</span> Candidat under Personne <span class="br0">&#40;</span>...<span class="br0">&#41;</span> <span class="kw1">NOT</span> final ;</pre>
+
+<p>
+OU en modifiant un type existant: <code>alter type Candidat not final cascade;</code>
+</p>
+
+</div>
+
+<h4 id="transtypage">Transtypage</h4>
+<div class="level4">
+
+<p>
+Utiliser la fonction <code>treat</code> pour forcer SQL à considérer un objet d&#039;un sous-type dans une colection d&#039;un super-type. Exemple :
+</p>
+<pre class="code plsql"><a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=CREATE"><span class="kw1">CREATE</span></a> <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=TYPE"><span class="kw1">TYPE</span></a> A <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=AS"><span class="kw1">AS</span></a> object <span class="br0">&#40;</span>B <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=NUMBER"><span class="kw1">NUMBER</span></a><span class="br0">&#41;</span> <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=NOT"><span class="kw1">NOT</span></a> final<span class="sy0">;</span> 
+<a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=CREATE"><span class="kw1">CREATE</span></a> <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=TYPE"><span class="kw1">TYPE</span></a> C  under A <span class="br0">&#40;</span>D <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=NUMBER"><span class="kw1">NUMBER</span></a><span class="br0">&#41;</span><span class="sy0">;</span> 
+<a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=CREATE"><span class="kw1">CREATE</span></a> <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=TABLE"><span class="kw1">TABLE</span></a> TA <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=OF"><span class="kw1">OF</span></a> A<span class="sy0">;</span> 
+<a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=INSERT"><span class="kw1">INSERT</span></a> <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=INTO"><span class="kw1">INTO</span></a> TA <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=VALUES"><span class="kw1">VALUES</span></a><span class="br0">&#40;</span>C<span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+Pour récupérer la valeur de l&#039;attribut D de l&#039;objet créé, utiliser :
+</p>
+<pre class="code sql"><span class="kw1">SELECT</span> treat<span class="br0">&#40;</span><span class="kw1">VALUE</span><span class="br0">&#40;</span>m<span class="br0">&#41;</span> <span class="kw1">AS</span> C<span class="br0">&#41;</span><span class="sy0">.</span>D <span class="kw1">FROM</span> TA m;</pre>
+
+</div>
+
+<h4 id="polymorphisme">Polymorphisme</h4>
+<div class="level4">
+
+<p>
+Une méthode définie dans un type parent peut être spécialisée dans un sous-type. La signature de la méthode commence par le mot overriding :
+</p>
+<pre class="code sql"> <span class="kw1">CREATE</span> <span class="kw1">TYPE</span> Personne <span class="br0">&#40;</span> member <span class="kw1">FUNCTION</span> F <span class="kw1">RETURN</span> <span class="kw1">NUMBER</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> final;
+ <span class="kw1">CREATE</span> <span class="kw1">TYPE</span> Candidat <span class="kw1">UNDER</span> Personne <span class="br0">&#40;</span> overriding member <span class="kw1">FUNCTION</span> F <span class="kw1">RETURN</span> <span class="kw1">NUMBER</span><span class="br0">&#41;</span>;</pre>
+
+</div>
+
+<h4 id="methode_abstraite">Méthode abstraite</h4>
+<div class="level4">
+
+<p>
+Possibilité de définir une méthode abstraite seulement dans un type qui n&#039;est jamais instancié.
+ Pour cela, il faut définir d&#039;une part un type <code>not instantiable</code>, et d&#039;autre part une méthode elle même <code>not instanciable</code>
+</p>
+<pre class="code oracle11"><span class="kw1">CREATE</span> <span class="kw1">TYPE</span> PieceBase ... <span class="br0">&#40;</span>   .... <span class="br0">&#41;</span> <span class="kw1">NOT</span> final <span class="kw1">NOT</span> instantiable;</pre>
+
+<p>
+Signature de la méthode abstraite : 
+</p>
+<pre class="code oracle11"><span class="kw1">NOT</span> instantiable member <span class="kw1">FUNCTION</span> volume <span class="kw1">RETURN</span> <span class="kw1">NUMBER</span>;</pre>
+
+</div>
+
+<h4 id="affecter_le_resultat_d_une_requete_a_une_variable_ensemblistele_bulk_collect_into">Affecter le résultat d&#039;une requête à une variable ensembliste : le &#039;&#039;bulk collect into&#039;&#039;</h4>
+<div class="level4">
+
+<p>
+En PL/SQL, il est possible de récupérer, dans une variable, l&#039;ensemble des objets retournés par une requête SQL, grâce à l&#039;instruction d&#039;affectation <code>bulk collect into</code> placée juste avant la clause <code>from</code> de la requête.
+</p>
+<pre class="code plsql">listeNoms EnsNoms<span class="sy0">;</span> <span class="co1">-- listeNoms est une variable de type ''ensemble de chaînes de caractères''</span>
+<a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=BEGIN"><span class="kw1">BEGIN</span></a>
+<a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=SELECT"><span class="kw1">SELECT</span></a> m<span class="sy0">.</span>nom <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=BULK"><span class="kw1">BULK</span></a> <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=COLLECT"><span class="kw1">COLLECT</span></a> <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=INTO"><span class="kw1">INTO</span></a> listeNoms <a target="_blank" href="http://www.oracle.com/pls/db92/db92.drilldown?word=FROM"><span class="kw1">FROM</span></a> LesMatieres m<span class="sy0">;</span></pre>
+
+</div>
+
+<h4 id="fonctions_value">Fonctions value()</h4>
+<div class="level4">
+
+<p>
+La fonction <strong>value()</strong> prend en paramètre une variable déclarée dans la clause FROM. 
+Le type retourné est <strong>identique</strong> à celui de la variable. Exemple: <code>value(m).nom</code>
+</p>
+
+</div>
+
+<h4 id="fonctions_deref">Fonctions deref()</h4>
+<div class="level4">
+
+<p>
+La fonction <strong>deref()</strong> prend en paramètre une expression de chemin dont le type est une référence. 
+Le type retourné est un type objet. Exemples : <code>deref(p.est_en)</code> ou <code>deref(value(m)).nom</code>
+</p>
+
+</div>
+
+<h4 id="syntaxe_du_return">Syntaxe du return</h4>
+<div class="level4">
+
+<p>
+Le mot clé <code>return</code> est suivi d&#039;une expression PL/SQL, mais pas d&#039;une requete SQL. 
+Ne pas écrire:  <code>return (select … from …)</code>.
+Il faut d&#039;abord affecter le résultat de la requête à une variable <code>v</code>, puis faire <code>return v;</code>
+</p>
+<hr />
+
+<p>
+retour vers <a href="/wiki/site/enseignement/master/mlbda/start" class="wikilink1" title="site:enseignement:master:mlbda:start">4I801 MLBDA : Modèles et Langages pour les Bases de Données Avancés</a>]
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>site/enseignement/master/mlbda/tmesql3.txt</bdi> · Dernière modification: 2016/10/13 10:49 par <bdi>hubert</bdi></div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Outils de la page</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="plugin_move_page"><a href=""><span>Renommer la page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Tout plier/déplier"><span>Tout plier/déplier</span></a></li><li><a href="/wiki/site/enseignement/master/mlbda/tmesql3?do=export_odt"  class="action export_odt" rel="nofollow" title="Exportation ODT"><span>Exportation ODT</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Haut de page [T]"><span>Haut de page</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous les termes de la licence suivante : <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern" target="_blank">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" target="_blank"><img src="/wiki/lib/images/license/button/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported" /></a>        <a href="http://www.dokuwiki.org/donate" title="Donate" target="_blank"><img
+            src="/wiki/lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://php.net" title="Powered by PHP" target="_blank"><img
+            src="/wiki/lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" target="_blank"><img
+            src="/wiki/lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" target="_blank"><img
+            src="/wiki/lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" target="_blank"><img
+            src="/wiki/lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="/wiki/lib/exe/indexer.php?id=site%3Aenseignement%3Amaster%3Amlbda%3Atmesql3&amp;1508602193" width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div></body>
+</html>
