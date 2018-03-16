@@ -1,9 +1,14 @@
 Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC.
+
+
 Il y a plein d'UE que je n'ai pas cherché/trouvé.
 Dès que quelques documents étaient trouvés pour une UE, je passais à une autre UE sans chercher d'avantage de documents.
 Je ne compte pas continuer à chercher mais toute aide reste bienvenue.
 
+
+
 Notes techniques :
+
 Fichiers obtenus après une semaine de [web scraping](https://en.wikipedia.org/wiki/Web_scraping)
 manuel avec l'aide de [JDownloader](http://jdownloader.org/).
 L'opération a été effectuée le 01/10/2017 environ.
