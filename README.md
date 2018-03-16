@@ -1,4 +1,4 @@
-# Une idée des master
+# Une idée des masters
 
 #### Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC (masters ANDROIDE, DAC, SAR, SFPN et STL).  
 Recherchez avec github le code d'une UE pour voir si il y a un dossier qui lui correspond.
