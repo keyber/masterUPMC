@@ -2,14 +2,11 @@
 
 #### Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC (masters ANDROIDE, DAC, SAR, SFPN et STL).  
 Recherchez avec github le code d'une UE pour voir si il y a un dossier qui lui correspond.
-(Il y a plein d'UE que je n'ai pas cherché/trouvé. Pour chaque UE, il y a plein de documents que je n'ai pas obtenu. Et il y a de fortes chances que le contenu des UE ait changé.)  
 
 lien donnant le [nom complet, le nom réduit et le code de chaque UE](http://www-master.ufr-info-p6.jussieu.fr/ue/2014/).
 
 # Tableau récapitulatif des choix possibles au S1 et S2
 ##### Je n'ai pas trouvé de source officielle sur internet mais il peut être possible de changer de master après le M1S1 si on a suivi les UE obligatoires du master de destination.
-Tableaux donnés à titre indicatif, ne pas leur accorder trop de confiance.  
-
 
 1 : obligatoire  
 2 : fortement recommandée  
@@ -24,6 +21,8 @@ en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 #### Semestre 2 :  
 ![GitHub Logo](S2/UES2.png)  
 
+Tableaux donnés à titre indicatif, ne pas leur accorder trop de confiance.  
+
 
 ### Site des masters:  
 http://androide.lip6.fr/  
@@ -35,6 +34,8 @@ lien vers le [diplôme d'excellence](http://www-master.ufr-info-p6.jussieu.fr:80
 
 
 ###### Notes techniques :  
+- Il y a plein d'UE que je n'ai pas cherché/trouvé. Et pour chaque UE, il y a plein de documents que je n'ai pas obtenu
+- Il y a de fortes chances que le contenu des UE ait changé.
 - Dès que quelques documents étaient trouvés pour une UE, je passais à une autre UE sans chercher d'avantage de documents.  
 - Résultats obtenus à partir des sites des UEs, les informations entre le site dédié
 et la description sur http://www-master.ufr-info-p6.jussieu.fr/lmd/ ne sont pas toujours cohérentes.  
