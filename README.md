@@ -27,7 +27,8 @@ Tableaux donnés à titre indicatif, ne pas leur accorder trop de confiance.
 1 : obligatoire  
 2 : fortement recommandée  
 3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
-#### Semestre 1 :  (voir tableau plus détaillé dans le [dossier S1](https://github.com/keyber/masterUPMC/blob/master/S1/readme.md))  
+#### Semestre 1 :  (tableau plus détaillé [ici]https://raw.githubusercontent.com/keyber/masterUPMC/master/S1/UES1.png))  
+
 ![GitHub Logo](S1/UES1short.png)  
 en rouge : les UE obligatoires  
 en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
