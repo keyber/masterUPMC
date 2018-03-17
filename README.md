@@ -21,14 +21,13 @@ lien vers le [diplôme d'excellence](http://www-master.ufr-info-p6.jussieu.fr:80
 
 # Tableau récapitulatif des choix possibles au S1 et S2
 ##### Je n'ai pas trouvé de source officielle sur internet mais il peut être possible de changer de master après le M1S1 si on a suivi les UE obligatoires du master de destination.
- 
+Tableaux à titre indicatif, ne pas leur accorder trop de confiance.  
 
 
 1 : obligatoire  
 2 : fortement recommandée  
 3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
-#### Semestre 1 :  
-(voir tableau plus détaillé dans le [dossier S1](https://github.com/keyber/masterUPMC/blob/master/S1/readme.md))  
+#### Semestre 1 :  (voir tableau plus détaillé dans le [dossier S1](https://github.com/keyber/masterUPMC/blob/master/S1/readme.md))  
 ![GitHub Logo](S1/UES1short.png)  
 en rouge : les UE obligatoires  
 en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
@@ -43,7 +42,6 @@ en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 ###### Notes techniques :  
 Résultats obtenus à partir des sites des UEs, les informations entre le site dédié
 et la description sur http://www-master.ufr-info-p6.jussieu.fr/lmd/ ne sont pas toujours cohérentes.  
-Tableaux à titre indicatif, ne pas leur accorder trop de confiance.
 Fichiers obtenus après une semaine de [web scraping](https://en.wikipedia.org/wiki/Web_scraping)
 manuel avec l'aide de [JDownloader](http://jdownloader.org/).  
 L'opération a été effectuée le 01/10/2017 environ.  
