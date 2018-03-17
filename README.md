@@ -8,12 +8,12 @@ lien donnant le [nom complet, le nom réduit et le code de chaque UE](http://www
 # Tableau récapitulatif des choix possibles au S1 et S2
 ##### Je n'ai pas trouvé de source officielle sur internet mais il peut être possible de changer de master après le M1S1 si on a suivi les UE obligatoires du master de destination.
 
-1 : obligatoire  
-2 : fortement recommandée  
-3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
 #### Semestre 1 :  ([voir tableau plus détaillé](https://raw.githubusercontent.com/keyber/masterUPMC/master/S1/UES1.png))  
 
 ![GitHub Logo](S1/UES1short.png)  
+1 : obligatoire  
+2 : fortement recommandée  
+3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
 en rouge : les UE obligatoires  
 en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 
