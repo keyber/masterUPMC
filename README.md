@@ -32,7 +32,7 @@ Tableaux à titre indicatif, ne pas leur accorder trop de confiance.
 2 : fortement recommandée  
 3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
 #### Semestre 1 :  
-![GitHub Logo](S12/UES1.png)
+![GitHub Logo](S1/UES1.png)
 en rouge : les UE obligatoires  
 en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 
