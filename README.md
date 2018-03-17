@@ -5,11 +5,8 @@ Recherchez avec github le code d'une UE pour voir si il y a un dossier qui lui c
 
 
 
-Il y a plein d'UE que je n'ai pas cherché/trouvé .
-Dès que quelques documents étaient trouvés pour une UE, je passais à une autre UE sans chercher d'avantage de documents.  
-Il y a de fortes chances que le contenu ait changé.  
-Je ne compte pas continuer à chercher des documents mais toute aide reste bienvenue.
-
+Il y a plein d'UE que je n'ai pas cherché/trouvé. Et pour chaque UE, il y a plein de documents que je n'ai pas obtenu.
+Il y a de fortes chances que le contenu des UE ait changé.  
 
 Site des masters:  
 http://androide.lip6.fr/  
@@ -43,6 +40,7 @@ en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 
 
 ###### Notes techniques :  
+- Dès que quelques documents étaient trouvés pour une UE, je passais à une autre UE sans chercher d'avantage de documents.  
 - Résultats obtenus à partir des sites des UEs, les informations entre le site dédié
 et la description sur http://www-master.ufr-info-p6.jussieu.fr/lmd/ ne sont pas toujours cohérentes.  
 - Fichiers obtenus après une semaine de [web scraping](https://en.wikipedia.org/wiki/Web_scraping)
@@ -53,4 +51,5 @@ https://www-master.ufr-info-p6.jussieu.fr:8083/2017/
 http://www-master.ufr-info-p6.jussieu.fr/ue/2014/description.php?code_ue=4I901  
 (en faisant varier la date dans l'URL directement pour accéder aux ressources ds années antérieures)  
 et fait des recherches google.
+- Je ne compte pas continuer à chercher des documents mais toute aide reste bienvenue.
 
