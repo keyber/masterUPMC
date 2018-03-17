@@ -21,7 +21,7 @@ lien vers le [diplôme d'excellence](http://www-master.ufr-info-p6.jussieu.fr:80
 
 # Tableau récapitulatif des choix possibles au S1 et S2
 ##### Je n'ai pas trouvé de source officielle sur internet mais il peut être possible de changer de master après le M1S1 si on a suivi les UE obligatoires du master de destination.
-Tableaux à titre indicatif, ne pas leur accorder trop de confiance.  
+Tableaux donnés à titre indicatif, ne pas leur accorder trop de confiance.  
 
 
 1 : obligatoire  
@@ -40,12 +40,12 @@ en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 
 
 ###### Notes techniques :  
-Résultats obtenus à partir des sites des UEs, les informations entre le site dédié
+- Résultats obtenus à partir des sites des UEs, les informations entre le site dédié
 et la description sur http://www-master.ufr-info-p6.jussieu.fr/lmd/ ne sont pas toujours cohérentes.  
-Fichiers obtenus après une semaine de [web scraping](https://en.wikipedia.org/wiki/Web_scraping)
+- Fichiers obtenus après une semaine de [web scraping](https://en.wikipedia.org/wiki/Web_scraping)
 manuel avec l'aide de [JDownloader](http://jdownloader.org/).  
-L'opération a été effectuée le 01/10/2017 environ.  
-J'ai principalement cherché sur les sites des masters,  
+- L'opération a été effectuée le 01/10/2017 environ.  
+- J'ai principalement cherché sur les sites des masters,  
 https://www-master.ufr-info-p6.jussieu.fr:8083/2017/  
 http://www-master.ufr-info-p6.jussieu.fr/ue/2014/description.php?code_ue=4I901  
 (en faisant varier la date dans l'URL directement pour accéder aux ressources ds années antérieures)  
