@@ -1,12 +1,12 @@
 # Une idée des masters
 
 #### Fichiers récupérés sur internet dans le but de donner une idée des UE de master informatique à l'UPMC (masters ANDROIDE, DAC, SAR, SFPN et STL).  
-Recherchez avec github le code d'une UE pour voir si il y a un dossier qui lui correspond.
-
+Recherchez avec github le code d'une UE pour voir si il y a un dossier qui lui correspond.  
 lien donnant le [nom complet, le nom réduit et le code de chaque UE](http://www-master.ufr-info-p6.jussieu.fr/ue/2014/).
 
 # Tableau récapitulatif des choix possibles au S1 et S2
 ##### Je n'ai pas trouvé de source officielle sur internet mais il peut être possible de changer de master après le M1S1 si on a suivi les UE obligatoires du master de destination.
+Tableaux donnés à titre indicatif, ne pas leur accorder trop de confiance.  
 
 #### Semestre 1 :  ([voir tableau plus détaillé](https://raw.githubusercontent.com/keyber/masterUPMC/master/S1/UES1.png))  
 
@@ -21,7 +21,6 @@ en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 #### Semestre 2 :  
 ![GitHub Logo](S2/UES2.png)  
 
-Tableaux donnés à titre indicatif, ne pas leur accorder trop de confiance.  
 
 
 ### Site des masters:  
