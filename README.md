@@ -28,14 +28,14 @@ lien vers le [diplôme d'excellence](http://www-master.ufr-info-p6.jussieu.fr:80
 2 : fortement recommandée  
 3 : conseillée (ou "seules autres UE autorisées" selon les masters)  
 #### Semestre 1 :  
-(voir tableau plus détaillé dans le [dossier S1](https://github.com/keyber/masterUPMC/edit/master/S1/README.md)
-![GitHub Logo](S1/UES1short.png)
+(voir tableau plus détaillé dans le [dossier S1](https://github.com/keyber/masterUPMC/edit/master/S1/README.md))  
+![GitHub Logo](S1/UES1short.png)  
 en rouge : les UE obligatoires  
 en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 
 
 #### Semestre 2 :  
-![GitHub Logo](S2/UES2.png)
+![GitHub Logo](S2/UES2.png)  
 
 
 
