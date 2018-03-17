@@ -16,7 +16,9 @@ http://androide.lip6.fr/
 http://dac.lip6.fr/master/  
 http://www-master.ufr-info-p6.jussieu.fr/lmd/
 
-lien vers le [diplôme d'excellence](http://www-master.ufr-info-p6.jussieu.fr:8080/espace_etudiant/doc_notes/diplomeexcellence.pdf).
+
+lien vers le [diplôme d'excellence](http://www-master.ufr-info-p6.jussieu.fr:8080/espace_etudiant/doc_notes/diplomeexcellence.pdf).  
+[lien donnant le nom complet, le nom réduit et le code de chaque UE](http://www-master.ufr-info-p6.jussieu.fr/ue/2014/)
 
 
 # Tableau récapitulatif des choix possibles au S1 et S2
