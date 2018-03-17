@@ -19,7 +19,7 @@ en jaune : les groupes d'UE pour lesquels on ne peut en choisir qu'une
 
 
 #### Semestre 2 :  
-![GitHub Logo](S2/UES2.png)  
+![GitHub Logo](S2/UES.png)  
 
 
 
